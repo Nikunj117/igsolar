@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-bar {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 0;
+}
+
+.top-bar .contact-info span {
+    margin-right: 20px;
+}
+
+.language-and-social {
+    float: right;
+}
+
+.language-and-social span {
+    margin-right: 20px;
+}
+
+.language-and-social .social-icons a {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    background: #ecf0f1;
+    padding: 15px 0;
+}
+
+.main-nav .logo h1 {
+    float: left;
+}
+
+.main-nav .nav-links {
+    list-style: none;
+    float: left;
+    margin-left: 50px;
+}
+
+.main-nav .nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav .nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav .get-quote {
+    float: right;
+}
+
+.main-nav .get-quote a {
+    background: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('image.png') no-repeat center center/cover;
+    height: 600px;
+    color: white;
+    text-align: left;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-nav .logo, .main-nav .nav-links, .main-nav .get-quote {
+        float: none;
+        text-align: center;
+    }
+    .main-nav .nav-links {
+        margin-left: 0;
+    }
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-image {
+        display: none;
+    }
+    .hero-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+

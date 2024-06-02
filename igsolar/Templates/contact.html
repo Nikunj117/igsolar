@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block container %}
+<body>
+    <div class="main_wrapper">
+
+        <section>
+            <div class="container-fluid power_system_main">
+                <div class="row">
+                    <div class="col-lg-12" style="padding-left: 0%; padding-right: 0%;">
+                        <div class="power_system_img">
+                            <img src="{% static 'images/countus_image.png' %}" alt="solar_system" class="img-fluid" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        
+         <!-- contact-form -->
+
+         <section class="contact_solar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact_solar-form">
+                            <h4 class="fw-normal mb-0">Contact Wlth Us</h4>
+                            <h2 class="mb-0">Get In Touch!</h2>
+                            <p class="fs-6 fw-normal mb-0">Get in Touch! Contact with us Get in Touch! Contact with us
+                            </p>
+                            <div class="mt-4">
+                                <div class="contact-img d-flex align-items-start mb-3">
+                                    <img src="{% static 'images/contact/map.png' %}" alt="">
+                                    <div class="contact-form ms-3">
+                                        <strong>Address</strong>
+                                        <p class="mb-0">29 Pottery Avenue Point Cook VIC 3030</p>
+                                    </div>
+                                </div>
+                                <div class="contact-img d-flex align-items-start mb-3">
+                                    <img src="{% static 'images/contact/call2.png' %}" alt="">
+                                    <div class="contact-form ms-3">
+                                        <strong>Call Us Today</strong>
+                                        <p class="mb-0">0497767676</p>
+                                    </div>
+                                </div>
+                                <div class="contact-img d-flex align-items-start mb-3">
+                                    <img src="{% static 'images/contact/email.png' %}" alt="">
+                                    <div class="contact-form ms-3">
+                                        <strong>Email Us</strong>
+                                        <p class="mb-0">info@isolarnation.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form method="post" action="" class="">
+                            {% csrf_token %}
+                            <div class="d-flex">
+                                <div class="mb-3 col-6 me-2 position-relative">
+                                    <input type="text" name="fullname" class="form-control" id="fullName" placeholder="Full Name"
+                                        required>
+                                    <img src="{% static 'images/contact/name.png' %}" alt="" class="usericon">
+                                </div>
+                                <div class="mb-3 col-6 position-relative ">
+                                    <input type="email" name="email" class="form-control emailclass" id="emailAddress"
+                                        placeholder="Enter your email address" required>
+                                    <img src="{% static 'images/contact/address.png' %}" alt="" class="usericon-3">
+                                </div>
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <input type="number" name="phone_number" class="form-control" id="phoneNumber"
+                                    placeholder="Enter your phone number" required>
+                                <img src="{% static 'images/contact/phone.png' %}" alt="" class="usericon-4">
+                            </div>
+                            <div class="mb-3 position-relative">
+                                <input type="text" name="service" class="form-control" id="phoneNumber" placeholder="Select a servicer"
+                                    required>
+                                <img src="{% static 'images/contact/services.png' %}" alt="" class="usericon-4">
+                            </div>
+                            <!-- <div class="mb-3">
+                                <select class="form-select" id="selectService" required>
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="service1">Service 1</option>
+                                    <option value="service2">Service 2</option>
+                                    <option value="service3">Service 3</option>
+                                </select>
+                            </div> -->
+                            <div class="mb-3">
+                                <input type="text" name="company_name" class="form-control" id="companyName"
+                                    placeholder="Enter your company name" required>
+                            </div>
+                            <div class="textarea position-relative">
+                                <textarea class="form-control" name="comment" id="question" rows="4" placeholder="Enter your question"
+                                    required></textarea>
+                                <img src="{% static 'images/contact/message.png' %}" alt="" class="usericon-5">
+                            </div>
+                            <button type="submit">Send Messages</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26455.85360291119!2d144.7522034551536!3d-37.8902994427464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6927dfecfa3a3%3A0x5045675218cd840!2sPoint%20Cook%20VIC%203030%2C%20Australia!5e0!3m2!1sen!2sus!4v1626287125750!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    
+
+{% endblock container %}

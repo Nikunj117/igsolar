@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block container %}
+    <section>
+        <div class="container-fluid power_system_main">
+            <div class="row">
+                <div class="col-lg-12" style="padding-left: 0%; padding-right: 0%;">
+                    <div class="power_system_img">
+                        <img src="{% static 'images/about_us.png' %}" alt="about_us" class="img-fluid" style="width:100%;">
+                    </div>
+                </div>
+            </div>
+        
+
+        </div>
+    </section>
+
+    <section class="about-intro" style="padding-top: 5%; padding-bottom: 5%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="intro-image">
+                        <img src="{% static 'images/index_one.png' %}" alt="Introduction Image" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="intro-text">
+                        <h3>Our Introduction</h3>
+                        <h1>We're Developing Future Solar Solutions</h1>
+                        <p>I-Solar Nation has been trading in solar industry from 21st April 2020 but our parental company Green Homes Pty Ltd has been in renewable products and solar consultancy business from DEC. 2012 onwards and we only use tier-one products for our solar power systems. All of our products are priced competitively to bring you uncompromised service without you breaking the bank. We are approved by the Smart Energy Council of Australia and we are also approved by Clean Energy Council Member so you can be assured that we are adhering to the highest standards of quality and ethics when it comes to providing the best in renewable power systems.</p>
+                        <a href="/productandservices"><button class="about_us_btn">Check Out What We Offer</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock container %}

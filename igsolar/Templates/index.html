@@ -1,0 +1,354 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block container %}
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    
+    .slider {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: left;
+    }
+    
+    .caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    .caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .caption p {
+        font-size: 1rem;
+    }
+    
+    .buttons {
+        margin-top: 20px;
+    }
+    
+    .buttons button {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    .buttons button:hover {
+        background-color: #e67e22;
+    }
+    
+    .controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    
+    .controls button {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .controls button:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .caption h2 {
+            font-size: 1.2rem;
+        }
+    
+        .caption h1 {
+            font-size: 2rem;
+        }
+    
+        .caption p {
+            font-size: 0.9rem;
+        }
+    
+        .buttons button {
+            padding: 8px 16px;
+        }
+        .image_for_slider{
+            height: 359px!important;
+        }
+    }
+    
+</style>
+<div class="slider">
+    <div class="slides">
+        <div class="slide active">
+            <img src="{% static 'images/slider1.png' %}" alt="Slide 1" class="image_for_slider">
+            <div class="caption">
+                <h2>Our Solar Systems</h2>
+                <h1>Energize Society By Reliable Energy</h1>
+                <p>$0 upfront payment available</p>
+                <div class="buttons">
+                    <button>Our Service</button>
+                    <button>More About!</button>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/slider1.png' %}" alt="Slide 2" class="image_for_slider">
+            <div class="caption">
+                <h2>Our Solar Systems</h2>
+                <h1>Energize Society By Reliable Energy</h1>
+                <p>$0 upfront payment available 11</p>
+                <div class="buttons">
+                    <button>Our Service</button>
+                    <button>More About!</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+    <div class="controls">
+        <button class="prev" onclick="prevSlide()">&#8249;</button>
+        <button class="next" onclick="nextSlide()">&#8250;</button>
+    </div>
+</div>
+<script>
+    let slideIndex = 0;
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlides(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlides(slideIndex);
+}
+
+// Initialize the slider
+showSlides(slideIndex);
+
+// Automatically change slides every 5 seconds
+setInterval(nextSlide, 5000);
+
+</script>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .introduction {
+        display: flex;
+        align-items: center;
+        padding: 50px 0;
+    }
+    
+    .intro-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .intro-image {
+        position: relative;
+        flex: 1;
+    }
+    
+    .intro-image img {
+        width: 100%;
+        height: auto;
+        {% comment %} border-radius: 10px; {% endcomment %}
+    }
+    
+    .experience {
+        position: absolute;
+        background: #f39c12;
+        color: white;
+        padding: 21px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .clients {
+        position: absolute;
+        background: #ffffff;
+        color: #faa722;
+        padding: 0px;
+        border-radius: 0px;
+        display: flex;
+        {% comment %} flex-direction: column; {% endcomment %}
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .experience {
+        top: 1px;
+        left: 402px;
+        padding-left: 11px;
+        padding-top: 34px;
+    }
+    
+    .clients {
+        bottom: -57px;
+        left: 93px;
+        width: 46%;
+        height: 24%;
+    }
+    
+    .clients img {
+        {% comment %} border-radius: 50%; {% endcomment %}
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    
+    .intro-text {
+        flex: 1;
+        margin-left: 40px;
+    }
+    
+    .intro-text h3 {
+        color: #f39c12;
+        margin-bottom: 10px;
+    }
+    
+    .intro-text h1 {
+        margin-bottom: 20px;
+    }
+    
+    .intro-text p {
+        margin-bottom: 20px;
+    }
+    
+    .intro-text button {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .intro-text button:hover {
+        background-color: #e67e22;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .intro-content {
+            flex-direction: column;
+        }
+    
+        .intro-text {
+            margin-left: 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+    
+        .experience, .clients {
+            position: static;
+            margin: 10px 0;
+        }
+        
+    }
+    
+</style>
+<section class="introduction">
+    <div class="container">
+        <div class="intro-content">
+            <div class="intro-image">
+                <img src="{% static 'images/index_one.png' %}" alt="Solar Solutions">
+                <div class="experience">
+                    <h3>29+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="clients">
+                    <img src="{% static 'images/client_img.png' %}" alt="Client">
+                    <p style="padding-left: 14px;"><strong>2900+</strong><br>Satisfied Clients</p>
+                </div>
+            </div>
+            <div class="intro-text">
+                <h3>Our Introduction</h3>
+                <h1>We're Developing Future Solar Solutions</h1>
+                <p>I-Solar Nation is a provider of solar panels for residential and commercial use. You can save on money in the long run by investing in your very own renewable solar power system to power your homes or businesses.</p>
+                <button>Our Service</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock container %}
