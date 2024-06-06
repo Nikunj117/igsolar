@@ -160,9 +160,9 @@
                 <div class="col-lg-4 col-md-6 footer_col">
                     <div class="footer_logo">
                         <div><img src="{% static 'assets/logo.svg' %}"></div>
-                        <p>Feugiat a ligula rutrum luctus primis ultrice
+                        {% comment %} <p>Feugiat a ligula rutrum luctus primis ultrice
                             nteger congue magna at pretium purus a
-                            pretium ligula rutrum and luctus risus</p>
+                            pretium ligula rutrum and luctus risus</p> {% endcomment %}
                         <div class="footer_ic_main d-flex">
                             <div class="footer_ic"><img src="{% static 'assets/facebook.svg' %}"></div>
                             <div class="footer_ic"><img src="{% static 'assets/twitter.svg' %}"></div>
@@ -182,14 +182,15 @@
                             <li><a href="/vectoriarebate" class="footer_a_link">Victoria Ribate</a></li>
                             <li><a href="/contact" class="footer_a_link">Contact us</a></li>
                             <li><a href="/blog" class="footer_a_link">Blog</a></li>
+                            <li><a href="{% static 'pdf/CEC_Complaint_Handling_process.pdf' %}" class="footer_a_link">Complaints Handling Policy</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 footer_col">
                     <div class="footer_industry_sector">
                         <h4>Get In Touch</h4>
-                        <p>29 Pottery Avenue Point<br>
-                        Cook VIC 3030<br>0497767676<br><span style="color: #FAA722;">info@isolarnation.com</span></p>
+                        <p>29 Pottery Avenue<br>
+                        Point Cook VIC 3030<br>0497767676<br><span style="color: #FAA722;">info@isolarnation.com</span></p>
                     </div>
                 </div>
             </div>

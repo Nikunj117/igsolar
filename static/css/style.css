@@ -271,8 +271,8 @@ victoria-rebate-banner img {
 
 .box_line {
 	border-width: 2px;
-	border-color: #faa722;
-	border-style: solid;
+	/* border-color: #faa722;
+	border-style: solid; */
 	padding: 2% 2% 2% 2%;
 	margin-top: 3%;
 }
