@@ -249,5 +249,26 @@
         })
     </script>
    
+    <script>
+        function scrollToSectionFromURL() {
+            // Get the query parameters from the URL
+            const queryParams = new URLSearchParams(window.location.search);
+            // Check if the "section" query parameter is present
+            const section = queryParams.get('section');
+
+            if (section) {
+                // Find the section with the corresponding ID
+                const targetSection = document.getElementById(section);
+                if (targetSection) {
+                    // Scroll to the target section
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        }
+
+        // Run the function on page load
+        window.onload = scrollToSectionFromURL;
+    </script>
+    
   </body>
 </html>
