@@ -182,3 +182,39 @@ class Blog(TemplateView):
             except ValidationError:
                 messages.error(request, "Invalid email address.")
         return redirect('blog')
+
+class KnowledgeCenter(TemplateView):
+    template_name = "knowledge_center.html"
+
+    def get(self, request):
+        context = {"title":"Knowledge Center"}
+        return render(request, self.template_name,context)
+
+    def post(self, request):
+        if 'sub_email' in request.POST:
+            sub_email = request.POST.get('sub_email')
+            try:
+                validate_email(sub_email)
+                UserMail.objects.create(email=sub_email)
+                messages.success(request, "Subscription successful.")
+            except ValidationError:
+                messages.error(request, "Invalid email address.")
+        return redirect('knowledgecenter')
+
+class LatestNews(TemplateView):
+    template_name = "latest_news.html"
+
+    def get(self, request):
+        context = {"title":"Latest News"}
+        return render(request, self.template_name,context)
+
+    def post(self, request):
+        if 'sub_email' in request.POST:
+            sub_email = request.POST.get('sub_email')
+            try:
+                validate_email(sub_email)
+                UserMail.objects.create(email=sub_email)
+                messages.success(request, "Subscription successful.")
+            except ValidationError:
+                messages.error(request, "Invalid email address.")
+        return redirect('latestnews')

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block container %}
+
+
+        <section>
+            <div class="container-fluid power_system_main">
+                <div class="row">
+                    <div class="col-lg-12" style="padding-left: 0%; padding-right: 0%;">
+                        <div class="power_system_img">
+                            <img src="{% static 'images/latest_news.png' %}" alt="solar_system" class="img-fluid" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        {% comment %} <section class="latest-news-section"> {% endcomment %}
+            <h1>
+                No News Right Now
+            </h1>
+        {% comment %} </section> {% endcomment %}
+
+
+
+{% endblock container %}

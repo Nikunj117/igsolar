@@ -36,7 +36,7 @@
 }
 
 .menu_item {
-	padding: 0 20px;
+	padding: 0 10px;
 	font-weight: 500;
 	font-size: 17px;
 
@@ -1249,6 +1249,83 @@ victoria-rebate-banner img {
 	padding-bottom: 211px;
 }
 
+.offer-box {
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    margin: auto;
+    font-size: 24px;
+    padding-top: 16px;
+    background-color: #ffffff;
+}
+
+.solar-boxs {
+    background: #6e5c5c2b;
+}
+
+.offer-details {
+    font-size: 26px;
+    color: #ee931e;
+}
+
+.offer-title {
+    color: #606060;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 23px;
+}
+
+.offer-note {
+    color: #7a7a7a;
+}
+
+.bolt-img img {
+    width: 50px;
+    transform: rotate(-15deg);
+    height: 43px;
+}
+
+.solar-text {
+    line-height: 24px !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .offer-box {
+        border-radius: 8px;
+        width: 100%;
+        padding: 16px;
+        margin: auto;
+        padding-top: 16px;
+        background-color: #ffffff;
+    }
+
+    .solar-text {
+        font-size: 14px !important;
+        line-height: 24px !important;
+
+    }
+
+    .solar-boxs {
+        background: #6e5c5c2b;
+    }
+
+    .offer-details {
+        font-size: 22px;
+        color: #ee931e;
+        margin-bottom: 15px !important;
+    }
+
+    .offer-title {
+        color: #606060;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .solar-image {
+        margin-top: 15px;
+    }
+}
+
 
 @media only screen and (min-width: 500px) and (max-width: 992px) {
 	.residential_solar {
@@ -1301,6 +1378,40 @@ victoria-rebate-banner img {
 	.products_solar .product-solar .product-solar-bottom {
 		padding-bottom: 180px !important;
 	}
+	
+    .offer-box {
+        border-radius: 8px;
+        width: 100%;
+        padding: 16px;
+        margin: auto;
+        padding-top: 16px;
+        background-color: #ffffff;
+    }
+
+    .solar-text {
+        font-size: 14px !important;
+        line-height: 24px;
+    }
+
+    .solar-boxs {
+        background: #6e5c5c2b;
+    }
+
+    .offer-details {
+        font-size: 22px;
+        color: #ee931e;
+        margin-bottom: 15px !important;
+    }
+
+    .offer-title {
+        color: #606060;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .solar-image {
+        margin-top: 15px;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1140px) {
@@ -1325,6 +1436,39 @@ victoria-rebate-banner img {
 		font-size: 22px !important;
 		line-height: 20px !important;
 	}
+	.offer-box {
+        border-radius: 8px;
+        width: 100%;
+        padding: 16px;
+        margin: auto;
+        padding-top: 16px;
+        background-color: #ffffff;
+    }
+
+    .solar-text {
+        font-size: 14px !important;
+        line-height: 24px;
+    }
+
+    .solar-boxs {
+        background: #6e5c5c2b;
+    }
+
+    .offer-details {
+        font-size: 22px;
+        color: #ee931e;
+        margin-bottom: 15px !important;
+    }
+
+    .offer-title {
+        color: #606060;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .solar-image {
+        margin-top: 15px;
+    }
 }
 
 
@@ -1717,4 +1861,51 @@ textarea.form-control {
     .contact-img img {
         width: 50px;
     }
+}
+
+
+
+
+
+/* knowledge-section */
+.mt-3{
+	margin-bottom: 1rem !important;
+}
+
+button.accordion-button {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+    background-image: url(../image/minus.png);
+}
+
+.accordion-button::after {
+    background-image: url(../image/plus.png);
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* solar-get */
+
+.solar-get .solar-panel-img h4 {
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.solar-get .solar-panel-img p {
+    line-height: 43px;
+}
+
+.solar-get-2 {
+    padding-bottom: 80px;
 }
