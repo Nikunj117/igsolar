@@ -11,4 +11,5 @@ admin.site.register(Post, PostAdmin)
 
 admin.site.register(Appointment)
 admin.site.register(contactus)
+admin.site.register(contactusnew)
 admin.site.register(UserMail)
