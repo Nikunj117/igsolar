@@ -36,6 +36,15 @@ class contactus(TimeStampModel):
     company_name = models.CharField(max_length=100, null=True)
     comments = models.TextField(null=True)
 
+
+class contactusnew(TimeStampModel):
+    fullname = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    phonenumber = models.CharField(max_length=14)
+    existing_customer = models.CharField(max_length=100, null=True)
+    enquiry_type = models.CharField(max_length=100, null=True)
+    callback_team = models.TextField(null=True)
+
 class UserMail(models.Model):
     email = models.EmailField(unique=True)
     def __str__(self):

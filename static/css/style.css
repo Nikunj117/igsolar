@@ -1909,3 +1909,32 @@ a {
 .solar-get-2 {
     padding-bottom: 80px;
 }
+
+
+
+/* latestnews */
+
+.keep-text {
+    color: #8fc04e;
+    font-size: 16px;
+}
+
+.card h3 a{
+    line-height: 28px;
+    font-weight: normal;
+    color: #444;
+}
+
+.latest-news-section .card {
+   height: 650px;
+}
+
+.card span {
+    margin: 10px 0;
+    display: inline-block;
+    color: #bbb;
+}
+
+.card p {
+    color: #777;
+}

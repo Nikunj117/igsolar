@@ -78,10 +78,13 @@ class ContactView(TemplateView):
             try:
                   
                 validate_email(email)
-                service = request.POST.get('service', None)
-                comment = request.POST.get('comment', None)
-                company_name = request.POST.get('company_name', None)
-                contactus.objects.create(fullname=name, email=email, phonenumber = phone_number ,services=service, company_name=company_name,comments=comment)
+                # service = request.POST.get('service', None)
+                # comment = request.POST.get('comment', None)
+                # company_name = request.POST.get('company_name', None)
+                existing_customer = request.POST.get('existingCustomer', None)
+                enquiry_type = request.POST.get('enquiryType', None)
+                callback_team = request.POST.get('callbackFrom', None)
+                contactusnew.objects.create(fullname=name, email=email, phonenumber = phone_number ,existing_customer=existing_customer, enquiry_type=enquiry_type,callback_team=callback_team)
                 messages.success(request, "Appointment booked successfully.")
             except ValidationError:
                 messages.error(request, "Invalid email address for appointment.")
