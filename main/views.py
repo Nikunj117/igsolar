@@ -41,15 +41,32 @@ class Home(TemplateView):
         
         if 'name' in request.POST and 'apo_email' in request.POST:
             name = request.POST.get('name')
-            apo_email = request.POST.get('apo_email')
+            email = request.POST.get('apo_email')
+            phone_number = request.POST.get('apo_number')
             try:
-                validate_email(apo_email)
-                service = request.POST.get('service', None)
-                comment = request.POST.get('comment', None)
-                Appointment.objects.create(fullname=name, email=apo_email, services=service, comments=comment)
+                  
+                validate_email(email)
+                # service = request.POST.get('service', None)
+                # comment = request.POST.get('comment', None)
+                # company_name = request.POST.get('company_name', None)
+                existing_customer = request.POST.get('existingCustomer', None)
+                enquiry_type = request.POST.get('enquiryType', None)
+                callback_team = request.POST.get('callbackFrom', None)
+                contactusnew.objects.create(fullname=name, email=email, phonenumber = phone_number ,existing_customer=existing_customer, enquiry_type=enquiry_type,callback_team=callback_team)
                 messages.success(request, "Appointment booked successfully.")
             except ValidationError:
                 messages.error(request, "Invalid email address for appointment.")
+
+            # name = request.POST.get('name')
+            # apo_email = request.POST.get('apo_email')
+            # try:
+            #     validate_email(apo_email)
+            #     service = request.POST.get('service', None)
+            #     comment = request.POST.get('comment', None)
+            #     Appointment.objects.create(fullname=name, email=apo_email, services=service, comments=comment)
+            #     messages.success(request, "Appointment booked successfully.")
+            # except ValidationError:
+            #     messages.error(request, "Invalid email address for appointment.")
         
         return redirect('home')
     
