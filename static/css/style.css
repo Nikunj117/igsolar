@@ -447,7 +447,6 @@ victoria-rebate-banner img {
 	padding: 100px 0;
 
 	color: #fff;
-
 }
 
 
@@ -1937,4 +1936,123 @@ a {
 
 .card p {
     color: #777;
+}
+
+/* ============panels-box============ */
+.panels-text {
+    background-color: #ee931e;
+    margin-bottom: 0px;
+    padding: 7px;
+}
+
+.panels-text h2 {
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 39.29px;
+    text-align: left;
+    padding-top: 8px;
+}
+
+.panels-text {
+    border-radius: 0px 0px 11px 11px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+}
+
+.panels {
+    border: 1px solid #000000
+}
+
+.solar-panel-box {
+    border: 1px solid #000000;
+    border-radius: 11px 11px 11px 11px;
+    width: 183px;
+    margin-top: 46px;
+    text-align: center;
+    margin-bottom: 22px;
+    margin-right: 18px;
+}
+
+.Inverters .solar-panel-box:nth-child(1) {
+    width: 183px;
+    height: 277px;
+}
+
+.Inverters-2 {
+    width: 183px;
+    height: 275px;
+}
+
+.solar-img {
+    width: 103px;
+    height: 155px;
+    margin: 0 auto;
+}
+
+.solar-panel-box img {
+    margin-top: 13px;
+    margin-bottom: 21px;
+}
+
+.solar-panel-box:nth-child(2) img {
+    margin-bottom: 35px;
+}
+
+.solar-panel .solar-panel-box:nth-child(1) img {
+    margin-bottom: 35px;
+}
+
+.solar-panel-2 .solar-panel-box:nth-child(1) img {
+    margin-bottom: 37px;
+}
+
+.solar-panel-2 .solar-panel-box:nth-child(2) img {
+    margin-bottom: 40px;
+}
+
+.Inverters .solar-panel-box:nth-child(1) img {
+    margin-bottom: 7px;
+}
+
+.Inverters-2 img {
+    margin-bottom: 15px !important;
+}
+
+.solar-panel-box h6 {
+    font-family: Jost;
+    font-size: 10.23px;
+    font-weight: 500;
+    line-height: 19.9px;
+    text-align: left;
+    margin-left: 18px;
+}
+
+.panels-text-2 {
+    background-color: #ee931e;
+    border-radius: 0px 0px 11px 11px;
+    width: 183px;
+    height: 31px;
+
+}
+
+.panels-text-2 h2 {
+    font-family: Jost;
+    font-size: 10.23px;
+    font-weight: 500;
+    line-height: 19.9px;
+    padding: 5px 6px;
+}
+
+.solar-jinko {
+    padding-left: 15px;
+    display: flex;;
+}
+
+.solar-panel-box:nth-child(2) {
+    margin-right: 0;
+}
+
+.logo-class {
+    width: 76px;
 }
