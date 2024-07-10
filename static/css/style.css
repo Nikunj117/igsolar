@@ -639,7 +639,7 @@ victoria-rebate-banner img {
 
 .how_we_create {
 
-	background-image: url("/static/images/home/how_we_bg.png");
+	background-image: url("/static_root/images/home/how_we_bg.png");
 
 	background-position: center;
 
