@@ -295,7 +295,7 @@ victoria-rebate-banner img {
 
 /* .solar_system_slider {
 
-	background-image: url(/static/images/home/home-page-image1.jpg);
+	background-image: url(/static_root/images/home/home-page-image1.jpg);
 
 	background-size: cover;
 
@@ -436,7 +436,7 @@ victoria-rebate-banner img {
 
 .home_slide_content {
 
-	background-image: url(/static/images/home/home-page-image1.jpg);
+	background-image: url(/static_root/images/home/home-page-image1.jpg);
 
 	background-size: cover;
 
@@ -452,7 +452,7 @@ victoria-rebate-banner img {
 
 .home_slide_content2 {
 
-	background-image: url(/static/images/home/slider-img2.jpg);
+	background-image: url(/static_root/images/home/slider-img2.jpg);
 
 	background-size: cover;
 
